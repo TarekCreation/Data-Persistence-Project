@@ -684,7 +684,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1088541185}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1121399937}
+        m_TargetAssemblyTypeName: CanvasUI, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1088541185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -919,6 +931,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca39b8d07112d645b91e982082de20c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputField: {fileID: 1738413369}
+  highScoreText: {fileID: 1117680245}
 --- !u!1 &1243493429
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,6 +962,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfe4071001196294aa2b8ab48d8842d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPlayerName: 
+  currentHighScore: 0
 --- !u!4 &1243493431
 Transform:
   m_ObjectHideFlags: 0
@@ -1044,7 +1060,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1663738643}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1121399937}
+        m_TargetAssemblyTypeName: CanvasUI, Assembly-CSharp
+        m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1663738643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1179,7 +1207,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1121399937}
+        m_TargetAssemblyTypeName: CanvasUI, Assembly-CSharp
+        m_MethodName: SetName
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}

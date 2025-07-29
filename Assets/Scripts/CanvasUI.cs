@@ -1,18 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 public class CanvasUI : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public InputField inputField;
+    public Text highScoreText;
     void Start()
     {
-        
+        DataHandler.Instance.LoadData();
+        inputField.text = DataHandler.Instance.currentPlayerName;
+        highScoreText.text = "HighScore: " + DataHandler.Instance.currentHighScore.ToString();
     }
-
-    // Update is called once per frame
-    void Update()
+    public void StartGame()
     {
-        
+        SceneManager.LoadScene(1);
+        DataHandler.Instance.SaveData();
+    }
+    public void SetName(string nameText)
+    {
+        DataHandler.Instance.currentPlayerName = nameText;
+    }
+    public void Exit()
+    {
+        DataHandler.Instance.SaveData();
+#if UNITY_EDITOR
+        EditorApplication.ExitPlaymode();
+#else
+        Application.Quit();
+#endif
     }
 }
